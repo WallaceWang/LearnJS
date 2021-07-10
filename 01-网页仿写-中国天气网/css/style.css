@@ -1,0 +1,59 @@
+* {
+    font-family: "Microsoft Yahei", Tahoma;
+}
+p {
+    text-indent: 2em;
+    color: #252525;
+    font-size: 20px ;
+}
+h1 {
+    text-align: center;
+}
+
+.subheadingleft,
+.subheadingright {
+    font-size: 16px;
+    color: #999;
+    display: inline-block;
+}
+
+.subheadingleft a {
+    text-decoration: none;
+    color: #999;
+}
+
+.subheadingleft a:hover {
+    color: black;
+}
+
+.subheadingright ul {
+    list-style: none;
+    display: inline-block;
+}
+.subheadingright ul li {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: pink;
+    text-align: center;
+    border-radius: 50%;
+}
+.subheadingright {
+    float: right;
+}
+.subheadingright ul {
+    margin-left: -20px;
+}
+.weatherimage {
+    text-align: center;
+}
+.weatherimage img {
+    /* min-width: 100%; */
+    margin: 0 auto !important;
+    display: block !important;
+}
+.footer {
+    text-align: right;
+    color: #999;
+    font-size: 16px;
+}
