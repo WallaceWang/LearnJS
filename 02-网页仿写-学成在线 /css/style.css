@@ -2,3 +2,81 @@
     margin: 0;
     padding: 0;
 }
+.w {
+    width: 1000px;
+    margin: auto;
+}
+.header {
+    /* 单位px不能漏写！！！ */
+    height: 42px;
+    margin-top: 30px;
+    /* background-color: skyblue; */
+}
+ .header .logo {
+    float: left;
+    width: 198px;
+    height: 42px;
+    background: url(../images/logo_03.png) no-repeat center/100%;
+}
+.header .nav li {
+    list-style: none;
+}
+
+.header .nav {
+    float: left;
+    margin-left: 60px;
+}
+.header .nav li {
+    float: left;
+    margin-right: 10px;
+    line-height: 42px;
+}
+.header .nav li a {
+    padding: 0 10px;
+    color: black;
+    text-decoration: none;
+}
+.header .nav li a:hover {
+    border-bottom: 1px solid purple;
+}
+
+.header .search {
+    float: left;
+    width: 300px;
+    height: 42px;
+    margin-left: 30px;
+    /* background-color: purple; */
+} 
+
+.header .search input {
+    float: left;
+    width: 250px;
+    height: 100%;
+    border: 1px solid skyblue;
+    border-right: none;
+}
+.header .search img {
+    float: left;
+}
+
+.header .user {
+    float:right;
+    width: 120px;
+    height: 42px;
+    /* background-color: teal; */
+}
+
+.header .user .head {
+    float: left;
+    width: 50px;
+    height: 42px;
+    background: url(../images/user.png) no-repeat center/50%;
+}
+
+.header .user .name {
+    float: left;
+    width: 70;
+    height: 42px;
+    text-align: center;
+    color:rgb(44, 43, 43);
+}
