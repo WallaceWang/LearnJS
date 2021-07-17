@@ -18,19 +18,18 @@
     height: 42px;
     background: url(../images/logo_03.png) no-repeat center/100%;
 }
-.header .nav li {
-    list-style: none;
-}
 
 .header .nav {
     float: left;
     margin-left: 60px;
 }
 .header .nav li {
+    list-style: none;
     float: left;
     margin-right: 10px;
     line-height: 42px;
 }
+
 .header .nav li a {
     padding: 0 10px;
     color: black;
@@ -80,3 +79,119 @@
     text-align: center;
     color:rgb(44, 43, 43);
 }
+
+.banner {
+    height: 420px;
+    margin-top: 20px;
+    background-color: purple;
+}
+
+.banner .bg {
+    height: 420px;
+    background: url(../images//banner2.png) no-repeat center;
+}
+
+.banner .bg .nav {
+    float: left;
+    width: 190px;
+    height: 420px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.banner .bg .nav ul {
+    padding: 0 20px;
+}
+
+.banner .bg .nav li {
+    list-style: none;
+    width: 100%;
+    height: 52.5px;
+}
+
+.banner .bg .nav li .name {
+    float: left;
+    width: auto;
+    height: 52.5px;
+}
+
+.banner .bg .nav li .arrow {
+    float: right;
+    width: auto;
+    height: 52.5px;
+}
+
+.banner .bg .nav li .arrow p {
+    line-height: 52.5px;
+    color: white;
+}
+
+.banner .bg .nav li div a {
+    line-height: 52.5px;
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+}
+
+.banner .bg .nav li a:hover,
+.banner .bg .nav li p:hover{
+    color: skyblue;
+}
+.banner .bg .mycourse {
+    float: right;
+    margin-top: 60px;
+    width: 230px;
+    height: 300px;
+    background-color: white;
+}
+
+.banner .bg .mycourse .title {
+    height: 50px;
+    background-color: skyblue;
+    color: white;
+    text-align: center;
+}
+
+.banner .bg .mycourse .title h3 {
+    line-height: 50px;
+}
+
+.banner .bg .mycourse .courselist {
+    height: 200px;
+    margin: 0 20px;
+}
+
+.banner .bg .mycourse .courselist li {
+    list-style: none;
+}
+
+.banner .bg .mycourse .courselist li div {
+    height: 66.66px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.banner .bg .mycourse .courselist li div h4 {
+    padding-top: 20px;
+    font-size: 14px;
+    font-weight: normal;
+    color: black;
+}
+.banner .bg .mycourse .courselist li div p {
+    font-size: 12px;
+    color: gray;
+}
+
+.banner .bg .mycourse .allcourse {
+    height: 40px;
+    margin: 5px 20px;
+} 
+
+.banner .bg .mycourse .allcourse button {
+    width: 100%;
+    height: 100%;
+    border-width: 1px;
+    border-color: rgb(0, 153, 255);
+    color: rgb(0, 153, 255);
+    background-color: white;
+}
+
+
