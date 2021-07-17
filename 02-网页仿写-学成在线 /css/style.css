@@ -1,3 +1,7 @@
+body {
+    margin-bottom: 50px;
+    background-color: rgb(240, 240, 240);
+}
 * {
     margin: 0;
     padding: 0;
@@ -192,6 +196,85 @@
     border-color: rgb(0, 153, 255);
     color: rgb(0, 153, 255);
     background-color: white;
+}
+
+/* course部分 */
+.course {
+    margin-top: 10px;
+}
+.course .nav {
+    height: 40px;
+    background-color: white;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.course .nav .title {
+    float: left;
+    width: 120px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(0, 153, 255);
+}
+
+.course .nav .detail {
+    float: left;
+}
+
+.course .nav .detail li {
+    float: left;
+    list-style: none;
+}
+
+.course .nav .detail li div {
+    height: 15px;
+    margin: 10px 0;
+    padding: 0 20px;
+    border-left: 1px solid gainsboro;
+}
+
+.course .nav .detail li div a {
+    text-align: center;
+    font-size: 12px;
+    color: gray;
+    text-decoration: none;
+}
+
+.course .nav .mod {
+    float: right;
+    width: 60px;
+    margin-right: 20px;
+    line-height: 40px;
+    font-size: 12px;
+    text-align: right;
+    color: rgb(0, 153, 255);
+}
+
+.course .head {
+    height: 30px;
+    margin-top: 20px;
+}
+
+.course .head h5 {
+    line-height: 30px;
+    font-weight: normal;
+    font-size: 13px;
+    color:black;
+}
+ 
+.course .recomend {
+    overflow: hidden;
+    width: 1012.5px;
+    margin-top: 1px;
+}
+
+.course .recomend div {
+    float: left;
+    width: 190px;
+    height: 230px;
+    margin-right: 12.5px;
+    margin-bottom: 12.5px;
+    background-color: pink;
 }
 
 
