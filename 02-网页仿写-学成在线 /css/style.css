@@ -268,13 +268,20 @@ body {
     margin-top: 1px;
 }
 
-.course .recomend div {
+.course .recomend>div {
     float: left;
+    position: relative;
     width: 190px;
     height: 230px;
     margin-right: 12.5px;
     margin-bottom: 12.5px;
     background-color: pink;
+}
+
+.course .recomend div .hot {
+    position: absolute;
+    top: 4px;
+    right: -4px;
 }
 
 
