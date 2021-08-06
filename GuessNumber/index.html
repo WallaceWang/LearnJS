@@ -6,17 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>猜数字游戏</title>
+    <link rel="stylesheet" href="./css/styleSheet.css">
     <script src="./js/index.js" async></script>
 </head>
 
 <body>
-    <h4>猜数字游戏</h4>
-    <p>我刚才随机选定了一个100以内的自然数。看你能否在 10 次以内猜中它。每次我都会告诉你所猜的结果是高了还是低了。</p>
-    <p>
-        请猜数：
-        <input type="text" name="请输入数字" id="input">
-        <button>确定</button>
-    </p>
+    <h2 class="title">猜数字游戏</h2>
+    <p class="content">我刚才随机选定了一个100以内的自然数。看你能否在 10 次以内猜中它。每次我都会告诉你所猜的结果是高了还是低了。</p>
+    <div class="inputArea">
+        <label for="guessField">请猜数：</label>
+        <input type="text" name="请输入数字" id="guessField" class="guessField">
+        <input type="submit" value="确定" class="guessSubmit">
+    </div>
+    <div class="resultPara">
+        <p class="guessList"></p>
+        <p class="guessResult"></p>
+        <p class="lowOrHigh"></p>
+    </div>
 </body>
 
 </html>

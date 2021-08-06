@@ -1,27 +1,38 @@
 const goalNum = parseInt(Math.random() * 100);
+let guessNumList = new Array();
+// 提交按钮
+const submitButton = document.querySelector('.guessSubmit');
+submitButton.addEventListener('click', check);
+// 历史记录
+const guessList = document.querySelector('.guessList');
 
-const button = document.querySelector('button');
-button.addEventListener('click', check);
+// 猜测结果
+const guessResult = document.querySelector('.guessResult');
+// 高或低
+const lowOrHigh = document.querySelector('.lowOrHigh');
+
 
 function check() {
-    const input = document.querySelector('input');
+    const input = document.querySelector('.guessField');
     const inputValue = parseInt(input.value);
     if (inputValue) {
+
+        guessNumList.push(inputValue);
+
+        guessList.textContent = "你上次猜的数：" + guessNumList.toString();        
+
         if (inputValue > goalNum) {
-            const errorP = document.createElement('p');
-            errorP.textContent = "请输入数字大了！"
-            errorP.textContent.fontcolor = 'red';
-            document.body.appendChild(errorP);
+            guessResult.textContent = "你猜错了！";
+            guessResult.style.backgroundColor = 'red';
+            lowOrHigh.textContent = "请输入数字大了！";
         } else if (inputValue < goalNum) {
-            const errorP = document.createElement('p');
-            errorP.textContent = "请输入数字小了！"
-            errorP.textContent.fontcolor = 'red';
-            document.body.appendChild(errorP);
+            guessResult.textContent = "你猜错了！";
+            guessResult.style.backgroundColor = 'red';
+            lowOrHigh.textContent = "请输入数字小了！";
         } else {
-            const errorP = document.createElement('p');
-            errorP.textContent = "恭喜你猜对了！"
-            errorP.textContent.fontcolor = 'green';
-            document.body.appendChild(errorP);
+            guessResult.textContent = "恭喜你猜对了！";
+            guessResult.style.backgroundColor = 'green';
+            lowOrHigh.textContent = "";
         }
     } else {
         const errorP = document.createElement('p');
