@@ -75,30 +75,83 @@ p2.sayHello();
 
 // 原型模式
 // function Person(){}
-let Person = function() {}
+// let Person = function() {}
 
-Person.prototype.name = 'wallace';
-Person.prototype.age = 30;
-Person.prototype.sayHello = function(){
-    console.log('hello, ' + this.name);
+// Person.prototype.name = 'wallace';
+// Person.prototype.age = 30;
+// Person.prototype.sayHello = function(){
+//     console.log('hello, ' + this.name);
+// }
+
+// let p1 = new Person();
+// let p2 = new Person();
+
+// p1.sayHello();
+// p2.sayHello();
+// console.log(p1.sayHello === p2.sayHello);
+// console.log(Person);
+// console.log(Person['prototype']);
+// console.log(Person.prototype);
+// console.log(Person.prototype.constructor);
+// console.log(Person.prototype['constructor']);
+// console.log(Person.prototype.constructor == Person);
+// console.log(p1.prototype);
+// console.log(p1.__proto__);
+// console.log(p1.__proto__ == Person.prototype);
+// console.log(Person.prototype.__proto__);
+// console.log(Person.prototype.__proto__ == Object.prototype);
+// console.log(Person.prototype.__proto__.constructor == Object);
+// console.log(p2.__proto__.__proto__.constructor == Object);
+
+
+/*
+let SubType = function(){
+    this.name = 'subType';
 }
 
-let p1 = new Person();
-let p2 = new Person();
+SubType.prototype.sayName = function(){
+    console.log(this.name);
+}
 
-p1.sayHello();
-p2.sayHello();
-console.log(p1.sayHello === p2.sayHello);
-console.log(Person);
-console.log(Person['prototype']);
-console.log(Person.prototype);
-console.log(Person.prototype.constructor);
-console.log(Person.prototype['constructor']);
-console.log(Person.prototype.constructor == Person);
-console.log(p1.prototype);
-console.log(p1.__proto__);
-console.log(p1.__proto__ == Person.prototype);
-console.log(Person.prototype.__proto__);
-console.log(Person.prototype.__proto__ == Object.prototype);
-console.log(Person.prototype.__proto__.constructor == Object);
-console.log(p2.__proto__.__proto__.constructor == Object);
+let SuperType = function(){
+    this.name = 'superType';
+    this.age = 30;
+}
+
+SuperType.prototype.sayName = function(){
+    console.log(this.name);
+}
+
+SuperType.prototype.sayInfo = function () {
+    console.log(this.name + this.age);
+}
+
+SubType.prototype = new SuperType();
+// 这种方式有两个问题：
+// 1. 父类的实例属性变成了子类的原型属性
+// 2. 子类实例化时，不能给父类构造函数传参
+// 解决方法：盗用构造函数
+
+let instance = new SubType();
+console.log(instance.name);
+console.log(instance.age);
+instance.sayName();
+instance.sayInfo();
+*/
+// 组合继承： 盗用构造函数（继承实例属性和方法） + 原型链（继承原型属性和方法）
+let Animal = function (name) {
+    this.name = name
+}
+Animal.prototype.sayName = function () {
+    console.log(this.name);
+}
+
+let Person = function () {
+    Animal.call(this, 'wallace');
+    this.age = 30;
+}
+Person.prototype = new Animal();
+
+let p = new Person();
+// console.log(p.name + p.age);
+p.sayName();
