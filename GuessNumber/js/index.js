@@ -138,6 +138,8 @@ console.log(instance.age);
 instance.sayName();
 instance.sayInfo();
 */
+
+/*
 // 组合继承： 盗用构造函数（继承实例属性和方法） + 原型链（继承原型属性和方法）
 let Animal = function (name) {
     this.name = name
@@ -155,3 +157,52 @@ Person.prototype = new Animal();
 let p = new Person();
 // console.log(p.name + p.age);
 p.sayName();
+*/
+
+// 类
+class Person {
+    constructor(name) {
+        this.name = name;
+        this.sayName = function () {
+            console.log('my name is ' + name);
+        }
+    }
+
+    sayAge() {
+        console.log('my age is 30.');
+    }
+
+    static sayHello () {
+        console.log('hello everyone');
+    }
+}
+
+let p = new Person('wallace');
+p.sayName();
+p.sayAge();
+Person.sayHello();
+Person.prototype.sayAge();
+
+
+// 继承
+class Chinese extends Person {
+    constructor(color) {
+        super('wang');
+        this.skinColor = color
+        this.sayName = function (){
+            // super.sayName();
+            console.log( 'and my skin is ' + this.skinColor);
+        }
+    }
+    sayAge(){
+        console.log('子类方法执行');
+        super.sayAge();
+    }
+
+
+}
+
+let wang = new Chinese('yellow');
+wang.sayName();
+wang.sayAge();
+Chinese.sayHello();
